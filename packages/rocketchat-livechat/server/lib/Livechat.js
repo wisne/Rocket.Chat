@@ -116,7 +116,7 @@ RocketChat.Livechat = {
 		// return messages;
 		return _.extend(RocketChat.sendMessage(guest, message, room), { newRoom, showConnecting: this.showConnecting() });
 	},
-	registerGuest({ token, name, email, department, phone, username } = {}) {
+	registerGuest({ token, name, email,saloon, department, phone, username } = {}) {
 		check(token, String);
 
 		let userId;
@@ -169,6 +169,10 @@ RocketChat.Livechat = {
 
 		if (name) {
 			updateUser.$set.name = name;
+		}
+
+		if(saloon){
+			updateUser.$set.saloon = saloon;
 		}
 
 		LivechatVisitors.updateById(userId, updateUser);
