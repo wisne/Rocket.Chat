@@ -20,6 +20,9 @@ Template.register.helpers({
 	},
 	selectedDepartment() {
 		return this._id === Livechat.department;
+	},
+	enableEmail(){
+		return Livechat.email_required;
 	}
 });
 

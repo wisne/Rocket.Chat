@@ -9,7 +9,9 @@
 		</p>
 		<form id="livechat-registration">
 			<input type="text" name="name" id="guestName" placeholder="{{_ "Name"}}">
-			<input type="hidden" name="email" id="guestEmail" placeholder="{{_ "Email"}}">
+			{{#if enableEmail}}
+			<input type="text" name="email" id="guestEmail" placeholder="{{_ "Email"}}">
+			{{/if}}
 			<input type="text" name="saloon" id="guestSaloon" placeholder="Saloon">
 
 			{{#if showDepartments}}

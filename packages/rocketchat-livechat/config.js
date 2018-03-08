@@ -3,7 +3,7 @@ Meteor.startup(function() {
 
 	RocketChat.settings.add('Livechat_enabled', false, { type: 'boolean', group: 'Livechat', public: true });
 
-	RocketChat.settings.add('Livechat_Email_Required',false,{type: 'boolean', group:'Livechat', public: true});
+	RocketChat.settings.add('Livechat_email_required',false,{type: 'boolean', group:'Livechat', public: true});
 
 	RocketChat.settings.add('Livechat_title', 'Rocket.Chat', { type: 'string', group: 'Livechat', public: true });
 	
