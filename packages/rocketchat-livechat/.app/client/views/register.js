@@ -36,8 +36,9 @@ Template.register.events({
 
 		const $name = instance.$('input[name=name]');
 		const $email = instance.$('input[name=email]');
-		if (!($name.val().trim() && $email.val().trim())) {
-			return instance.showError(TAPi18n.__('Please_fill_name_and_email'));
+		const $saloon = instance.$('input[name="saloon"]');
+		if (!($name.val().trim() && $saloon.val().trim())) {
+			return instance.showError(TAPi18n.__('Please_fill_name_and_saloon'));
 		} else {
 			let departmentId = instance.$('select[name=department]').val();
 			if (!departmentId) {
