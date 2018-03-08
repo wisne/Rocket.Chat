@@ -194,7 +194,7 @@ RocketChat.Livechat = {
 		}
 		return false;
 	},
-	saveGuest({ _id, name, email, phone }) {
+	saveGuest({ _id, name, email, phone, saloon }) {
 		const updateData = {};
 
 		if (name) {
@@ -205,6 +205,9 @@ RocketChat.Livechat = {
 		}
 		if (phone) {
 			updateData.phone = phone;
+		}
+		if(saloon){
+			updateData.saloon = saloon;
 		}
 		const ret = LivechatVisitors.saveGuestById(_id, updateData);
 

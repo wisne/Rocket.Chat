@@ -51,6 +51,7 @@ Template.visitorEdit.events({
 		userData.name = event.currentTarget.elements['name'].value;
 		userData.email = event.currentTarget.elements['email'].value;
 		userData.phone = event.currentTarget.elements['phone'].value;
+		userData.saloon = event.currentTarget.elements['saloon'].value;
 
 		roomData.topic = event.currentTarget.elements['topic'].value;
 		roomData.tags = event.currentTarget.elements['tags'].value;
