@@ -133,6 +133,13 @@ class LivechatVisitors extends RocketChat.models._Base {
 				unsetData.phone = 1;
 			}
 		}
+		if(data.saloon){
+			if (!_.isEmpty(s.trim(data.saloon))) {
+				setData.saloon = s.trim(data.saloon);
+			} else {
+				unsetData.saloon = 1;
+			}
+		}
 
 		const update = {};
 
