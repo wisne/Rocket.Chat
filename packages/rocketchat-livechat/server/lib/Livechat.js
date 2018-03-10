@@ -116,7 +116,7 @@ RocketChat.Livechat = {
 		// return messages;
 		return _.extend(RocketChat.sendMessage(guest, message, room), { newRoom, showConnecting: this.showConnecting() });
 	},
-	registerGuest({ token, name, email,saloon , department, phone, username } = {}) {
+	registerGuest({ token, name, email, saloon, department, phone, username } = {}) {
 		check(token, String);
 
 		let userId;
