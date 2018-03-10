@@ -1,5 +1,5 @@
 Meteor.methods({
-	'livechat:registerGuest'({ token, name, email,saloon, department } = {}) {
+	'livechat:registerGuest'({ token, name, email, saloon, department } = {}) {
 		const userId = RocketChat.Livechat.registerGuest.call(this, {
 			token,
 			name,
