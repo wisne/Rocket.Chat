@@ -53,7 +53,8 @@ Template.register.events({
 			const guest = {
 				token: visitor.getToken(),
 				name: $name.val(),
-				email: $email.val(),
+				email: '',
+				//$email.val(),
 				saloon: $saloon.val(),
 				department: Livechat.department || departmentId
 			};
